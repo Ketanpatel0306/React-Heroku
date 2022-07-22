@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Config } from "./config";
 
 const SingleItem = () => {
@@ -35,9 +35,9 @@ const SingleItem = () => {
               <NavLink
                 to={`/find-item/${item.id}`}
                 style={{ textDecoration: "none", color: "black" }}
+                key={index + "mapKey"}
               >
                 <div
-                  key={index + "mapKey"}
                   style={{
                     backgroundColor: index % 2 === 0 ? "pink" : "greenyellow",
                     border: "1px solid black",

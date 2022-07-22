@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { Config } from "./config";
 
 export const FindItem = () => {
-  const { id } = useParams();
   const [save, setSave] = useState([]);
+  const { id } = useParams();
 
   const DataFetch = async () => {
     const response = await fetch(`${Config.BaseUrl}/users`, {
@@ -12,8 +12,8 @@ export const FindItem = () => {
       headers: { Accept: "application/json" },
     });
     const data = await response.json();
-    const newData = data.data.filter((i) => {
-      return i.id === id;
+    let newData = data.data.filter((i) => {
+      return i.id == id;
     });
     console.log("newData", newData);
     setSave(newData);
@@ -21,7 +21,7 @@ export const FindItem = () => {
 
   useEffect(() => {
     DataFetch();
-  });
+  }, []);
 
   return (
     <div>
