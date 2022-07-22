@@ -15,7 +15,7 @@ export const FindItem = () => {
     let newData = data.data.filter((i) => {
       return i.id == id;
     });
-    console.log("newData", newData);
+    // console.log("newData", newData);
     setSave(newData);
   };
 
