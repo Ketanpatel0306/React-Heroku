@@ -43,7 +43,7 @@ export const FindItem = () => {
               <div
                 key={index + "mapKey"}
                 style={{
-                  backgroundColor: index % 2 === 0 ? "pink" : "greenyellow",
+                  backgroundColor: id % 2 === 0 ? "pink" : "greenyellow",
                   border: "1px solid black",
                   padding: "0px 30px",
                 }}
