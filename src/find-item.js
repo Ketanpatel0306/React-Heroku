@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Config } from "./config";
+import { NavLink } from "react-router-dom";
 
 export const FindItem = () => {
   const [save, setSave] = useState([]);
@@ -47,6 +48,9 @@ export const FindItem = () => {
                   padding: "0px 30px",
                 }}
               >
+                <NavLink to="/">
+                  <button>back</button>
+                </NavLink>
                 <p>
                   <b> Address: </b>
                   {item.address}
