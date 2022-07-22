@@ -32,7 +32,10 @@ const SingleItem = () => {
         >
           {save.map((item, index) => {
             return (
-              <NavLink to={`/find-item/${item.id}`}>
+              <NavLink
+                to={`/find-item/${item.id}`}
+                style={{ textDecoration: "none", color: "black" }}
+              >
                 <div
                   key={index + "mapKey"}
                   style={{

@@ -13,7 +13,7 @@ export const FindItem = () => {
     });
     const data = await response.json();
     const newData = data.data.filter((i) => {
-      return i.id == id;
+      return i.id === id;
     });
     console.log("newData", newData);
     setSave(newData);
@@ -21,7 +21,7 @@ export const FindItem = () => {
 
   useEffect(() => {
     DataFetch();
-  }, []);
+  });
 
   return (
     <div>
